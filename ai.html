@@ -259,31 +259,44 @@
         }
 
 /* Print only resume content */
-        @media print {
-             body * {
-                visibility: hidden;
-        }
+      @media print {
 
-        .box, .box * {
-            visibility: visible;
-        }
+  /* Remove browser colors */
+  body {
+    background: white !important;
+  }
 
-        .box {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-        }
+  /* Resume container */
+  .box {
+    background: white !important;
+    color: black !important;
+    position: static;
+    width: 100%;
+  }
 
-        button {
-            display: none;
-        }
+  /* Text color */
+  h1 {
+    color: black !important;
+  }
+
+  /* Remove typing cursor animation in PDF */
+  h1::after {
+    content: none !important;
+    animation: none !important;
+  }
+
+  /* Hide button */
+  button {
+    display: none;
+  }
 }
+
 
     </style>
     <!-- End Styling the resume builder -->
 
 
 </body>
+
 
 </html>
